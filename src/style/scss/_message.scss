@@ -1,0 +1,447 @@
+.lo_message_list {
+  // background: $cff;
+  margin: 10px 10px 0;
+  .lo_message_list_header {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid $cdd;
+    padding: 0 10px;
+    color: $c22;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .lo_message_list_ul {
+    // padding: 10px 10px 5px;
+    display: flex;
+    margin: 0 -24px -20px;
+
+    div.tab_left{
+      width: 84px;
+      font-weight: 500;
+      border-right: 1px solid #E9E9E9;
+      div.tabs{
+        color: #000000;
+        font-size: 14px;
+        padding: 20px 0 20px 17px;
+        border-left: 2px solid transparent;
+        width: 83px;
+        cursor: pointer;
+        .el-badge__content.is-fixed{
+          right: 0;
+        }
+      }
+      div.action{
+        color: #1890FF;
+        background: #E6F7FF;
+        border-left: 2px solid #1890FF
+      }
+    }
+    div.tab_content{
+      flex-grow: 1;
+      position: relative;
+      font-weight: 500;
+      .con_btn{
+        text-align: right;
+        color: rgba(0,0,0,0.65);
+        font-size: 14px;
+        line-height: 20px;
+        padding: 10px 10px 10px 0;
+        border-bottom: 1px solid #E9E9E9;
+        cursor: pointer;
+        &:hover{
+          color: #1890FF;
+        }
+      }
+      .con_main{
+        padding: 10px;
+        overflow-y: auto;
+        li {
+          margin-bottom: 5px;
+          border-bottom: 1px solid $cdd;
+          padding: 10px 20px 10px 10px;
+          position: relative;
+          white-space: inherit;
+          &:before {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            top: 14px;
+            left: 0px;
+            position: absolute;
+            background-image: url("assets/mes9.png");
+          }
+          .title {
+            width: 6px;
+            height: 6px;
+            background: $red;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 0 5px 5px;
+          }
+          .html-text{
+            width:250px;
+            word-wrap:break-word;
+            word-break:break-all;
+            overflow:hidden;
+          }
+          h4 {
+            font-size: 14px;
+            line-height: 24px;
+            color: $c22;
+            font-weight: bold;
+          }
+          .span{
+            line-height: 24px;
+            font-size: 10px;
+            color: rgba(0,0,0,0.3);
+          }
+          time {
+            position: absolute;
+            right: -10px;
+            top: 10px;
+            line-height: 24px;
+            font-size: 10px;
+            color: $c99;
+          }
+          p {
+            font-size: 12px;
+            line-height: 1.5;
+            color: $c55;
+          }
+          .ms-txt{
+            padding-left: 10px;
+          }
+        }
+        li.already{
+          h4{
+            color: rgba(0,0,0,0.55);
+            font-weight: normal;
+          }
+          time{
+            color: rgba(0,0,0,0.3);
+          }
+          p{
+            color: rgba(0,0,0,0.55);
+          }
+        }
+      }
+      .con_main.mes1 li{
+        &:before { background-image: url("assets/mes1.png");}
+      }
+      .con_main.mes2 li{
+        &:before { background-image: url("assets/mes5.png");}
+      }
+      .con_main.mes3 li{
+        &:before { background-image: url("assets/mes3.png");}
+      }
+      .con_main.mes9 li{
+        &:before { background-image: url("assets/mes9.png");}
+      }
+      .load_more{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-top: 1px solid #DFDFDF;
+        text-align: center;
+        color: #1890FF;
+        font-weight: bold;
+        cursor: default;
+        font-size: 12px;
+        background: #fff;
+      }
+    }
+
+  }
+  .lo_message_list_page {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 10;
+    padding-right: 10px;
+  }
+}
+.lo_message_main {
+  margin: 5px 10px;
+  .lo_message_detail {
+    padding: 15px 60px;
+    background: $cff;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      top: 17px;
+      left: 30px;
+      position: absolute;
+      background-image: url("assets/message_dot.svg");
+    }
+    .lo_message_detail_title {
+      font-size: 16px;
+      line-height: 24px;
+      color: $c22;
+      font-weight: bold;
+    }
+    .lo_message_detail_time {
+      line-height: 24px;
+      font-size: 12px;
+      color: $c99;
+    }
+  }
+}
+.article_content {
+  font-size: 15px;
+  overflow: hidden;
+  line-height: 1.6;
+  padding-top: 5px;
+  p,
+  div {
+    padding: 5px 0;
+  }
+  a,
+  span,
+  em,
+  i,
+  u,
+  strong,
+  b {
+    padding: 0 5px;
+  }
+  u {
+    text-decoration: none;
+    border-bottom: 1px solid $c55;
+  }
+  img {
+    max-width: 700px;
+    text-align: center;
+    display: block;
+    margin: 5px auto;
+  }
+  a:link,
+  a:visited,
+  a:active {
+    color: $blue;
+  }
+  a:hover {
+    color: $cf60;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $c22;
+    font-weight: bold;
+  }
+  embed {
+    width: 510px;
+    height: 400px;
+    display: block;
+    margin: 10px auto;
+  }
+  table {
+    width: 100%;
+    border: 1px solid $cdd;
+    font-size: 15px;
+    background: $cff;
+    margin: 5px auto;
+    line-height: 1.6;
+    &.position {
+      &,
+      td,
+      th {
+        border: none;
+        text-align: left;
+      }
+      tr:nth-child(2n) {
+        background: none;
+      }
+    }
+    * {
+      text-indent: 0;
+    }
+    th {
+      color: $cff;
+      font-size: 15px;
+      background: $c55;
+    }
+    th,
+    td {
+      border: 1px solid $cdd;
+      padding: 3px 8px;
+      text-align: center;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 150%;
+      overflow: hidden;
+      font-size: 20px;
+      background: none;
+      border: none;
+    }
+    tr:hover {
+      background: $cff;
+    }
+    img {
+      display: inline;
+      border: none;
+    }
+    tr td a:link,
+    tr td a:visited,
+    tr td a:active,
+    tr td a:hover {
+      font-size: 15px;
+    }
+    tr:nth-child(2n) {
+      background: $cfa;
+    }
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  h1 a:link,
+  h1 a:visited,
+  h1 a:active,
+  h1 a:hover {
+    font-size: 20px;
+  }
+  h2 a:link,
+  h2 a:visited,
+  h2 a:active,
+  h2 a:hover {
+    font-size: 18px;
+  }
+  h3 a:link,
+  h3 a:visited,
+  h3 a:active,
+  h3 a:hover {
+    font-size: 16px;
+  }
+  h4 a:link,
+  h4 a:visited,
+  h4 a:active,
+  h4 a:hover {
+    font-size: 14px;
+  }
+  h5 a:link,
+  h5 a:visited,
+  h5 a:active,
+  h5 a:hover {
+    font-size: 14px;
+  }
+  h6 a:link,
+  h6 a:visited,
+  h6 a:active,
+  h6 a:hover {
+    font-size: 14px;
+  }
+}
+
+.lo_message_popover {
+  header {
+    border-bottom: 1px solid $cdd;
+    padding-bottom: 8px;
+    margin: -3px -13px 0;
+    text-indent: 13px;
+    font-weight: bold;
+    color: $c00;
+    font-size: 14px;
+  }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      color: $c22;
+      @include dz();
+    }
+  }
+  .lo_message_popover_nothing {
+    text-align: center;
+    padding-bottom: 50px;
+    color: $c99;
+    font-size: 12px;
+    &:before {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 93px;
+      margin: 50px auto 0;
+      background-image: url("assets/nothing.png");
+    }
+  }
+  .lo_message_list_ul {
+    padding: 5px 0;
+    li {
+      font-size: 12px;
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      @include oneline(36px);
+      height: unset;
+      time {
+        float: right;
+        color: $c99;
+        padding-right: 10px;
+      }
+      span {
+        color: $c00;
+        font-weight: 300;
+        @include dz();
+      }
+      &:hover {
+        span {
+          color: $cf60;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .lo_message_popover .lo_message_list_ul li time{
+    float: unset;
+    display: block;
+    position: unset;
+  }
+}
+
+// @media screen and (min-width: 2000px) {
+//   .lo_message_popover .lo_message_list_ul li time{
+//     float: right;
+//     display: inherit;
+//     position: absolute;
+//   }
+// }

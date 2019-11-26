@@ -1,0 +1,204 @@
+.ho_main {
+  padding: 5px;
+  .ho_card {
+    margin-bottom: 5px;background: $cff;border-radius: 2px;
+    .ho_card_header {
+      height: 40px;border-bottom: 1px solid $cee;
+      @extend .cf;
+      h3 {
+        font-weight: bold;font-size: 14px;float: left;line-height: 40px;padding: 0 20px;
+      }
+    }
+  }
+  .ho_card_body {
+    padding: 20px;
+  }
+}
+.ho_dashboard {
+  @extend .cf;margin: -10px;
+  display: flex;
+  .ho_dashboard_item {
+    margin: 10px;float: left;overflow: hidden;
+    //width: calc(100% / 3 - 20px);
+    flex: 1;
+    cursor: pointer;
+    height: 100px;position: relative;
+    border: 1px solid $cee;border-radius: 4px;cursor: pointer;
+    box-shadow: 0 0 0 $cee;top: 0;
+    @include dz();
+    @include jb(rgba($c00, 0), rgba($c00, .05), -25);
+    &:hover {
+      // @include fd(1.02);
+      top: 1px;
+      box-shadow: 0 0 8px $cee;
+    }
+    &:before, &:after {
+      content: '';display: block;position: absolute;border-radius: 50%;
+    }
+    &:before {
+      width: 42px;height: 42px;left: 15px;bottom: 25px;
+    }
+    &:after {
+      width: 62px;height: 62px;left: -20px;bottom: -20px;
+    }
+    i, em, strong {
+      position: absolute;display: block;
+    }
+    i {
+      width: 50px;height: 50px;border-radius: 50%;left: 60px;top: 24px;
+      background-image: url('assets/dash_icon.png');
+      background-repeat: no-repeat;
+    }
+    em, strong {
+      color: $c00;right: 70px;font-weight: 500;
+    }
+    em {
+      top: 22px;height: 42px;font-size: 30px;
+    }
+    strong {
+      height: 22px;line-height: 22px;font-size: 16px;bottom: 22px;
+    }
+    &.ho_dashboard_dispatch {
+      background-color: rgba(248,251,255,1);
+      &:before {
+        background-color: rgba($blue, .1);
+      }
+      &:after {
+        background-color: rgba($blue, .2);
+      }
+      i {
+        background-position: 0 0;
+      }
+    }
+    &.ho_dashboard_waybill {
+      background-color:rgba(255,253,245,1);
+      &:before {
+        background-color: rgba($yellow, .1);
+      }
+      &:after {
+        background-color: rgba($yellow, .2);
+      }
+      i {
+        background-position: -50px 0;
+      }
+    }
+    &.ho_dashboard_receipt {
+      background-color: rgba(247,254,252,1);
+      &:before {
+        background-color: rgba($green, .1);
+      }
+      &:after {
+        background-color: rgba($green, .2);
+      }
+      i {
+        background-position: -100px 0;
+      }
+    }
+  }
+}
+
+.ho_flow {
+  width: 100%;
+  overflow-x: auto;
+  ul {
+    width: 1180px;margin: 0 auto;height: 470px;position: relative;transform-origin: 0 0 0;
+    li {
+      width: 220px;height: 80px;position: absolute;
+      background: #DEEAFD;border-radius: 4px;cursor: pointer;
+      box-shadow: 0 0 0 #6B9CE6;user-select: none;
+      @include dz();
+      &:nth-child(1) {
+        left: 0px;top: 110px;
+        .flow_icon {background-position: -240px 0;}
+        &:hover .flow_icon {background-position: 0 0;}
+        &.disable .flow_icon {background-position: -480px 0;}
+      }
+      &:nth-child(2) {
+        left: 0px;top: 240px;
+        .flow_icon {background-position: -270px 0;}
+        &:hover .flow_icon {background-position: -30px 0;}
+        &.disable .flow_icon {background-position: -510px 0;}
+      }
+      &:nth-child(3) {
+        left: 320px;top: 175px;
+        .flow_icon {background-position: -300px 0;}
+        &:hover .flow_icon {background-position: -60px 0;}
+        &.disable .flow_icon {background-position: -540px 0;}
+      }
+      &:nth-child(4) {
+        left: 640px;top: 175px;
+        .flow_icon {background-position: -330px 0;}
+        &:hover .flow_icon {background-position: -90px 0;}
+        &.disable .flow_icon {background-position: -570px 0;}
+      }
+      &:nth-child(5) {
+        left: 640px;top: 305px;
+        .flow_icon {background-position: -360px 0;}
+        &:hover .flow_icon {background-position: -120px 0;}
+        &.disable .flow_icon {background-position: -600px 0;}
+      }
+      &:nth-child(6) {
+        left: 960px;top: 45px;
+        .flow_icon {background-position: -390px 0;}
+        &:hover .flow_icon {background-position: -150px 0;}
+        &.disable .flow_icon {background-position: -630px 0;}
+      }
+      &:nth-child(7) {
+        left: 960px;top: 175px;
+        .flow_icon {background-position: -420px 0;}
+        &:hover .flow_icon {background-position: -180px 0;}
+        &.disable .flow_icon {background-position: -660px 0;}
+      }
+      &:nth-child(8) {
+        left: 960px;top: 305px;
+        .flow_icon {background-position: -450px 0;}
+        &:hover .flow_icon {background-position: -210px 0;}
+        &.disable .flow_icon {background-position: -690px 0;}
+      }
+      strong {
+        display: block;position: absolute;font-size: 16px;font-weight: bold;line-height: 80px;
+        left: 80px;color: #61A0FF;
+        @include dz();
+      }
+      .flow_icon {
+        width: 30px;height: 30px;display: block;position: absolute;top: 25px;left: 25px;
+        background-image: url('assets/flow_icon.png');
+        background-repeat: no-repeat;
+      }
+      &:hover {
+        box-shadow: 2px 2px 6px #6B9CE6;
+        strong {color: #106FFF;}
+      }
+      &.disable {
+        background: $cee;cursor: default;
+        &:hover { box-shadow: 0 0 0 #6B9CE6; }
+        strong {
+          color: rgba($c00, .2);
+        }
+      }
+    }
+    span {display: block;position: absolute;}
+    .flowline {background: #61A0FF;}
+    .flowline1, .flowline2, .flowline3, .flowline4, .flowline5 {height: 2px;width: 49px;}
+    .flowline1 {left: 220px;top: 149px;}
+    .flowline2 {left: 220px;top: 279px;}
+    .flowline3 {left: 270px;top: 214px}
+    .flowline4 {left: 910px;top: 86px}
+    .flowline5 {left: 910px;top: 345px}
+
+    .flowline6, .flowline7 {height: 2px;width: 98px;}
+    .flowline6 {left: 540px;top: 214px;}
+    .flowline7 {left: 860px;top: 214px;}
+
+    .flowline8 {width: 2px;height: 132px;left: 269px;top: 149px;}
+    .flowline9 {width: 2px;height: 260px;left: 910px;top: 86px;}
+    .flowline10 {width: 2px;height: 48px;left: 750px;top: 255px;}
+    .flowarrow {width: 0;height: 0;border: solid transparent;border-left-color: #61A0FF;border-width: 5px 0 5px 10px;}
+    .flowarrow1 {left: 310px;top: 210px;}
+    .flowarrow2 {left: 630px;top: 210px;}
+    .flowarrow3 {left: 950px;top: 210px;}
+    .flowarrow4 {left: 950px;top: 82px;}
+    .flowarrow5 {left: 950px;top: 341px;}
+    .flowarrow6 {left: 746px;top: 295px;@include xz(90);}
+  }
+}

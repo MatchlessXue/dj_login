@@ -1,0 +1,22 @@
+
+.lo_setting_menu {
+  padding: 20px;
+  .dj-dialog {
+      width:500px;
+  }
+  .custom-tree-node {
+    border-bottom: 1px dotted #ddd;
+    strong {
+      font-weight: bold;padding-right: 30px;
+    }
+    span {
+      padding-right: 30px;
+      em {
+        color: blue;
+      }
+      u {
+        text-decoration: none;color: green;
+      }
+    }
+  }
+}

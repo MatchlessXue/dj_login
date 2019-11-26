@@ -1,0 +1,38 @@
+$themeColor:#00aafc;//主题绿色
+$hoverThemeColor:#42bbfc;//按钮悬浮的背景色
+$fontColor:#323b44;//字体颜色
+$thBackground:#f7f7f7;//主题背景色
+$sideBarNavBackground:#fff;//左边栏导航色
+$bodyFont:14px;//全局字体12px
+$textColorBase:#36404a;
+$borderColorBase:#dfeaee;
+$borderRadius:2px;//所有为border-radius：2px
+$lineHeight:30px;//所有输入框的行高
+$fontColorBg:#868484;//字体提示颜色
+$campain-show-gray:#f6f6f6;//字体提示颜色
+
+$formLabel: #5b5b5b;
+$formInnerborder: #c7dff7;
+
+$tablea:#5db3f1;
+
+$--color-primary:#1989fa;
+
+$menuBgColor:#001529;
+$menuSelectedColor:#409eff;
+$menuFontColor:#fff;
+$menuFontCollaspeColor:#c0c7d6;
+
+@mixin mt-cancel-btn {
+    .mt-cancel-btn {
+        background: #ffffff;
+        border-color: #eeeeee;
+        color: inherit;
+        &:hover {
+            color: $themeColor;
+            border: 1px solid $themeColor;
+        }
+    }
+}
+
+
